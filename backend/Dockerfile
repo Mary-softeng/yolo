@@ -2,7 +2,7 @@
 FROM node:16-alpine
 
 # Set the working directory
-WORKDIR /usr/src/app
+WORKDIR /usr/src/backend
 
 # Copy the package.json file
 COPY package*.json ./
@@ -17,4 +17,4 @@ COPY . .
 EXPOSE 5000
 
 # Define the command to run the application (replace if needed)
-CMD [ "node", "server.js" ]
+CMD [ "npm", "start" ]

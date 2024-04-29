@@ -13,10 +13,45 @@
 
  **Client Dockerfile**
 
-!["Frontend Dockerfile"](Images/Frontend_Dockerfile.png)
+!["Client Dockerfile"](Images/Frontend_Dockerfile.png)
 
 3. Docker compose Networking(Application port allocation and a bridge network implementation)
+
+On docker-compose file, I created the network named marynjuguna1-network which was used to connect all the three sevices namely; mongo_db, backend and client. Each port had a specified port as follows:
+
+mongo_db - ports:
+      - 27018:27017
+
+backend - ports:
+      - '5000:5000'
+
+client - ports:
+      - '3000:3000'
+
+
+ **Docker-compose file**
+
+!["docker-compose"](Images/docker-composefile.png)
+
 4. Git workflow used to achieve the task
 5. Successful running of the applications and if not, debugging measures applied.
 6. Good practices such as Docker image tag naming standards for ease of identification of images and containers.
+
+ **Docker Images**
+
+!["Docker Images"](Images/dockerimages.png)
+
+ **Docker Containers**
+
+!["Docker Containers"](Images/dockercontainers.png)
+
 7. Screenshot of deployed image on DockerHub, clearly showing the version of the image.
+
+ **Docker hub backend**
+
+!["Docker hub backend"](Images/dockerhub_backend.png)
+
+
+ **Docker hub client**
+
+!["Docker hub client"](Images/dockerhub_client.png)

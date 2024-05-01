@@ -634,7 +634,7 @@ There was a break in communication with the mondodb despite :
 
  **Docker Containers**
 
-!["Docker Containers"](Images/dockercontainers.png)
+!["Docker Containers"](Images/Alldockercontainers.png)
 
 7. Screenshot of deployed image on DockerHub, clearly showing the version of the image.
 

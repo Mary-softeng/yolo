@@ -38,404 +38,32 @@ client - ports:
 I used git log to retrieve all the commits that I have listed below:
 
 
-commit d97ab738dc829b4ebb63158227c587e2e85f49fd (HEAD -> master, origin/master, origin/HEAD)
+mnjuguna@mnjuguna-ThinkPad-E14-Gen-4:~/Documents/Week4Ip/yolo$ git log
+commit a7a3d504963758385d0a1dc3b5dc8cfa0a1162e1 (HEAD -> master, origin/master, origin/HEAD)
 Author: Mary-softeng <marysofteng@gmail.com>
-Date:   Mon Apr 29 20:57:46 2024 +0300
+Date:   Wed May 1 22:26:47 2024 +0300
 
-    Added images on the images folder, modified docker-compose file and explanation.md file
+    Added docker container snapshot
 
-commit a6c68a3ab7e22061af2e77f2d6259ed1308b9f8c
+commit 62c84b816583df730031beea4fa1afecda1aa9b1
 Author: Mary-softeng <marysofteng@gmail.com>
-Date:   Mon Apr 29 20:20:16 2024 +0300
+Date:   Wed May 1 22:18:05 2024 +0300
 
-    Modified explanation file by adding clent Dockerfile snapshotpath
+    Added more snapshots on image folder, modified docker-compose.yml by adding a property that the containers should always restart incase they stop unexpectedly. Modified explanation.md by outlining the debugging processes.
 
-commit 296ca82f3811e4e06385a0589d1df56b0339d8eb
+commit 5cd0bc56542d6fb4b95ec6523191b4bdc0ef0731
 Author: Mary-softeng <marysofteng@gmail.com>
-Date:   Mon Apr 29 20:13:39 2024 +0300
+Date:   Wed May 1 18:13:21 2024 +0300
 
-    Modified explanation.md file, created Images folder to store all the snapshots
+    added snapshots on image folder, modified docker-compose file, renamed both client and backend Docker files
 
-commit 078fd045494aa0bf91c67a7d40a9e566197c0102
+commit 7945975b1a83156693c03a3a658ef2673d01b35d
 Author: Mary-softeng <marysofteng@gmail.com>
-:...skipping...
-commit d97ab738dc829b4ebb63158227c587e2e85f49fd (HEAD -> master, origin/master, origin/HEAD)
-Author: Mary-softeng <marysofteng@gmail.com>
-Date:   Mon Apr 29 20:57:46 2024 +0300
-
-    Added images on the images folder, modified docker-compose file and explanation.md file
-
-commit a6c68a3ab7e22061af2e77f2d6259ed1308b9f8c
-Author: Mary-softeng <marysofteng@gmail.com>
-Date:   Mon Apr 29 20:20:16 2024 +0300
-
-    Modified explanation file by adding clent Dockerfile snapshotpath
-
-commit 296ca82f3811e4e06385a0589d1df56b0339d8eb
-Author: Mary-softeng <marysofteng@gmail.com>
-Date:   Mon Apr 29 20:13:39 2024 +0300
-
-    Modified explanation.md file, created Images folder to store all the snapshots
-
-commit 078fd045494aa0bf91c67a7d40a9e566197c0102
-Author: Mary-softeng <marysofteng@gmail.com>
-Date:   Mon Apr 29 19:49:57 2024 +0300
-
-    Modified docker-compose.yml
-
-commit d2137d624e70dbd6418686e24c311c7b0ca95946
-Author: Mary-softeng <marysofteng@gmail.com>
-Date:   Fri Apr 26 10:44:09 2024 +0300
-
-    Modified docker-compose.yml by adding images names
-
-commit ac658e12230cf91659f000aa24b2c1d0e10842b4
-Author: Mary-softeng <marysofteng@gmail.com>
-:...skipping...
-commit d97ab738dc829b4ebb63158227c587e2e85f49fd (HEAD -> master, origin/master, origin/HEAD)
-Author: Mary-softeng <marysofteng@gmail.com>
-Date:   Mon Apr 29 20:57:46 2024 +0300
-
-    Added images on the images folder, modified docker-compose file and explanation.md file
-
-commit a6c68a3ab7e22061af2e77f2d6259ed1308b9f8c
-Author: Mary-softeng <marysofteng@gmail.com>
-Date:   Mon Apr 29 20:20:16 2024 +0300
-
-    Modified explanation file by adding clent Dockerfile snapshotpath
-
-commit 296ca82f3811e4e06385a0589d1df56b0339d8eb
-Author: Mary-softeng <marysofteng@gmail.com>
-Date:   Mon Apr 29 20:13:39 2024 +0300
-
-    Modified explanation.md file, created Images folder to store all the snapshots
-
-commit 078fd045494aa0bf91c67a7d40a9e566197c0102
-Author: Mary-softeng <marysofteng@gmail.com>
-Date:   Mon Apr 29 19:49:57 2024 +0300
-
-    Modified docker-compose.yml
-
-commit d2137d624e70dbd6418686e24c311c7b0ca95946
-Author: Mary-softeng <marysofteng@gmail.com>
-Date:   Fri Apr 26 10:44:09 2024 +0300
-
-    Modified docker-compose.yml by adding images names
-
-commit ac658e12230cf91659f000aa24b2c1d0e10842b4
-Author: Mary-softeng <marysofteng@gmail.com>
-Date:   Fri Apr 26 09:10:47 2024 +0300
-
-    Created a docker-compose.yml
-
-commit e3649f6d590cb7ef88eedcfe854f32275be0594d
-Author: Mary-softeng <marysofteng@gmail.com>
-Date:   Fri Apr 26 07:16:22 2024 +0300
-
-    Greated dockerignore file in order to exclede node_modules files while copying the images
-
-commit 0e8ff5bf0ca42dbf8c7a02867588b85667b6114c
-Author: Mary-softeng <marysofteng@gmail.com>
-Date:   Fri Apr 26 07:03:28 2024 +0300
-:...skipping...
-commit d97ab738dc829b4ebb63158227c587e2e85f49fd (HEAD -> master, origin/master, origin/HEAD)
-Author: Mary-softeng <marysofteng@gmail.com>
-Date:   Mon Apr 29 20:57:46 2024 +0300
-
-    Added images on the images folder, modified docker-compose file and explanation.md file
-
-commit a6c68a3ab7e22061af2e77f2d6259ed1308b9f8c
-Author: Mary-softeng <marysofteng@gmail.com>
-Date:   Mon Apr 29 20:20:16 2024 +0300
-
-    Modified explanation file by adding clent Dockerfile snapshotpath
-
-commit 296ca82f3811e4e06385a0589d1df56b0339d8eb
-Author: Mary-softeng <marysofteng@gmail.com>
-Date:   Mon Apr 29 20:13:39 2024 +0300
-
-    Modified explanation.md file, created Images folder to store all the snapshots
-
-commit 078fd045494aa0bf91c67a7d40a9e566197c0102
-Author: Mary-softeng <marysofteng@gmail.com>
-Date:   Mon Apr 29 19:49:57 2024 +0300
-
-    Modified docker-compose.yml
-
-commit d2137d624e70dbd6418686e24c311c7b0ca95946
-Author: Mary-softeng <marysofteng@gmail.com>
-Date:   Fri Apr 26 10:44:09 2024 +0300
-
-    Modified docker-compose.yml by adding images names
-
-commit ac658e12230cf91659f000aa24b2c1d0e10842b4
-Author: Mary-softeng <marysofteng@gmail.com>
-Date:   Fri Apr 26 09:10:47 2024 +0300
-
-    Created a docker-compose.yml
-
-commit e3649f6d590cb7ef88eedcfe854f32275be0594d
-Author: Mary-softeng <marysofteng@gmail.com>
-Date:   Fri Apr 26 07:16:22 2024 +0300
-
-    Greated dockerignore file in order to exclede node_modules files while copying the images
-
-commit 0e8ff5bf0ca42dbf8c7a02867588b85667b6114c
-Author: Mary-softeng <marysofteng@gmail.com>
-Date:   Fri Apr 26 07:03:28 2024 +0300
-
-:...skipping...
-commit d97ab738dc829b4ebb63158227c587e2e85f49fd (HEAD -> master, origin/master, origin/HEAD)
-Author: Mary-softeng <marysofteng@gmail.com>
-Date:   Mon Apr 29 20:57:46 2024 +0300
-
-    Added images on the images folder, modified docker-compose file and explanation.md file
-
-commit a6c68a3ab7e22061af2e77f2d6259ed1308b9f8c
-Author: Mary-softeng <marysofteng@gmail.com>
-Date:   Mon Apr 29 20:20:16 2024 +0300
-
-    Modified explanation file by adding clent Dockerfile snapshotpath
-
-commit 296ca82f3811e4e06385a0589d1df56b0339d8eb
-Author: Mary-softeng <marysofteng@gmail.com>
-Date:   Mon Apr 29 20:13:39 2024 +0300
-
-    Modified explanation.md file, created Images folder to store all the snapshots
-
-commit 078fd045494aa0bf91c67a7d40a9e566197c0102
-Author: Mary-softeng <marysofteng@gmail.com>
-Date:   Mon Apr 29 19:49:57 2024 +0300
-
-    Modified docker-compose.yml
-
-commit d2137d624e70dbd6418686e24c311c7b0ca95946
-Author: Mary-softeng <marysofteng@gmail.com>
-Date:   Fri Apr 26 10:44:09 2024 +0300
-
-    Modified docker-compose.yml by adding images names
-
-commit ac658e12230cf91659f000aa24b2c1d0e10842b4
-Author: Mary-softeng <marysofteng@gmail.com>
-Date:   Fri Apr 26 09:10:47 2024 +0300
-
-    Created a docker-compose.yml
-
-commit e3649f6d590cb7ef88eedcfe854f32275be0594d
-Author: Mary-softeng <marysofteng@gmail.com>
-Date:   Fri Apr 26 07:16:22 2024 +0300
-
-    Greated dockerignore file in order to exclede node_modules files while copying the images
-
-commit 0e8ff5bf0ca42dbf8c7a02867588b85667b6114c
-Author: Mary-softeng <marysofteng@gmail.com>
-Date:   Fri Apr 26 07:03:28 2024 +0300
-
-    Modified docker file
-:...skipping...
-commit d97ab738dc829b4ebb63158227c587e2e85f49fd (HEAD -> master, origin/master, origin/HEAD)
-Author: Mary-softeng <marysofteng@gmail.com>
-Date:   Mon Apr 29 20:57:46 2024 +0300
-
-    Added images on the images folder, modified docker-compose file and explanation.md file
-
-commit a6c68a3ab7e22061af2e77f2d6259ed1308b9f8c
-Author: Mary-softeng <marysofteng@gmail.com>
-Date:   Mon Apr 29 20:20:16 2024 +0300
-
-    Modified explanation file by adding clent Dockerfile snapshotpath
-
-commit 296ca82f3811e4e06385a0589d1df56b0339d8eb
-Author: Mary-softeng <marysofteng@gmail.com>
-Date:   Mon Apr 29 20:13:39 2024 +0300
-
-    Modified explanation.md file, created Images folder to store all the snapshots
-
-commit 078fd045494aa0bf91c67a7d40a9e566197c0102
-Author: Mary-softeng <marysofteng@gmail.com>
-Date:   Mon Apr 29 19:49:57 2024 +0300
-
-    Modified docker-compose.yml
-
-commit d2137d624e70dbd6418686e24c311c7b0ca95946
-Author: Mary-softeng <marysofteng@gmail.com>
-Date:   Fri Apr 26 10:44:09 2024 +0300
-
-    Modified docker-compose.yml by adding images names
-
-commit ac658e12230cf91659f000aa24b2c1d0e10842b4
-Author: Mary-softeng <marysofteng@gmail.com>
-Date:   Fri Apr 26 09:10:47 2024 +0300
-
-    Created a docker-compose.yml
-
-commit e3649f6d590cb7ef88eedcfe854f32275be0594d
-Author: Mary-softeng <marysofteng@gmail.com>
-Date:   Fri Apr 26 07:16:22 2024 +0300
-
-    Greated dockerignore file in order to exclede node_modules files while copying the images
-
-commit 0e8ff5bf0ca42dbf8c7a02867588b85667b6114c
-Author: Mary-softeng <marysofteng@gmail.com>
-Date:   Fri Apr 26 07:03:28 2024 +0300
-
-    Modified docker file
-
-:...skipping...
-commit d97ab738dc829b4ebb63158227c587e2e85f49fd (HEAD -> master, origin/master, origin/HEAD)
-Author: Mary-softeng <marysofteng@gmail.com>
-Date:   Mon Apr 29 20:57:46 2024 +0300
-
-    Added images on the images folder, modified docker-compose file and explanation.md file
-
-commit a6c68a3ab7e22061af2e77f2d6259ed1308b9f8c
-Author: Mary-softeng <marysofteng@gmail.com>
-Date:   Mon Apr 29 20:20:16 2024 +0300
-
-    Modified explanation file by adding clent Dockerfile snapshotpath
-
-commit 296ca82f3811e4e06385a0589d1df56b0339d8eb
-Author: Mary-softeng <marysofteng@gmail.com>
-Date:   Mon Apr 29 20:13:39 2024 +0300
-
-    Modified explanation.md file, created Images folder to store all the snapshots
-
-commit 078fd045494aa0bf91c67a7d40a9e566197c0102
-Author: Mary-softeng <marysofteng@gmail.com>
-Date:   Mon Apr 29 19:49:57 2024 +0300
-
-    Modified docker-compose.yml
-
-commit d2137d624e70dbd6418686e24c311c7b0ca95946
-Author: Mary-softeng <marysofteng@gmail.com>
-Date:   Fri Apr 26 10:44:09 2024 +0300
-
-    Modified docker-compose.yml by adding images names
-
-commit ac658e12230cf91659f000aa24b2c1d0e10842b4
-Author: Mary-softeng <marysofteng@gmail.com>
-Date:   Fri Apr 26 09:10:47 2024 +0300
-
-    Created a docker-compose.yml
-
-commit e3649f6d590cb7ef88eedcfe854f32275be0594d
-Author: Mary-softeng <marysofteng@gmail.com>
-Date:   Fri Apr 26 07:16:22 2024 +0300
-
-    Greated dockerignore file in order to exclede node_modules files while copying the images
-
-commit 0e8ff5bf0ca42dbf8c7a02867588b85667b6114c
-Author: Mary-softeng <marysofteng@gmail.com>
-Date:   Fri Apr 26 07:03:28 2024 +0300
-
-    Modified docker file
-
-commit 756d088e0cbe7ae32ec71a92b67104d779e1df6b
-:...skipping...
-commit d97ab738dc829b4ebb63158227c587e2e85f49fd (HEAD -> master, origin/master, origin/HEAD)
-Author: Mary-softeng <marysofteng@gmail.com>
-Date:   Mon Apr 29 20:57:46 2024 +0300
-
-    Added images on the images folder, modified docker-compose file and explanation.md file
-
-commit a6c68a3ab7e22061af2e77f2d6259ed1308b9f8c
-Author: Mary-softeng <marysofteng@gmail.com>
-Date:   Mon Apr 29 20:20:16 2024 +0300
-
-    Modified explanation file by adding clent Dockerfile snapshotpath
-
-commit 296ca82f3811e4e06385a0589d1df56b0339d8eb
-Author: Mary-softeng <marysofteng@gmail.com>
-Date:   Mon Apr 29 20:13:39 2024 +0300
-
-    Modified explanation.md file, created Images folder to store all the snapshots
-
-commit 078fd045494aa0bf91c67a7d40a9e566197c0102
-Author: Mary-softeng <marysofteng@gmail.com>
-Date:   Mon Apr 29 19:49:57 2024 +0300
-
-    Modified docker-compose.yml
-
-commit d2137d624e70dbd6418686e24c311c7b0ca95946
-Author: Mary-softeng <marysofteng@gmail.com>
-Date:   Fri Apr 26 10:44:09 2024 +0300
-
-    Modified docker-compose.yml by adding images names
-
-commit ac658e12230cf91659f000aa24b2c1d0e10842b4
-Author: Mary-softeng <marysofteng@gmail.com>
-Date:   Fri Apr 26 09:10:47 2024 +0300
-
-    Created a docker-compose.yml
-
-commit e3649f6d590cb7ef88eedcfe854f32275be0594d
-Author: Mary-softeng <marysofteng@gmail.com>
-Date:   Fri Apr 26 07:16:22 2024 +0300
-
-    Greated dockerignore file in order to exclede node_modules files while copying the images
-
-commit 0e8ff5bf0ca42dbf8c7a02867588b85667b6114c
-Author: Mary-softeng <marysofteng@gmail.com>
-Date:   Fri Apr 26 07:03:28 2024 +0300
-
-    Modified docker file
-
-commit 756d088e0cbe7ae32ec71a92b67104d779e1df6b
-Author: Mary-softeng <marysofteng@gmail.com>
-:...skipping...
-commit d97ab738dc829b4ebb63158227c587e2e85f49fd (HEAD -> master, origin/master, origin/HEAD)
-Author: Mary-softeng <marysofteng@gmail.com>
-Date:   Mon Apr 29 20:57:46 2024 +0300
+Date:   Mon Apr 29 21:12:25 2024 +0300
 
-    Added images on the images folder, modified docker-compose file and explanation.md file
-
-commit a6c68a3ab7e22061af2e77f2d6259ed1308b9f8c
-Author: Mary-softeng <marysofteng@gmail.com>
-Date:   Mon Apr 29 20:20:16 2024 +0300
-
-    Modified explanation file by adding clent Dockerfile snapshotpath
-
-commit 296ca82f3811e4e06385a0589d1df56b0339d8eb
-Author: Mary-softeng <marysofteng@gmail.com>
-Date:   Mon Apr 29 20:13:39 2024 +0300
-
-    Modified explanation.md file, created Images folder to store all the snapshots
-
-commit 078fd045494aa0bf91c67a7d40a9e566197c0102
-Author: Mary-softeng <marysofteng@gmail.com>
-Date:   Mon Apr 29 19:49:57 2024 +0300
-
-    Modified docker-compose.yml
-
-commit d2137d624e70dbd6418686e24c311c7b0ca95946
-Author: Mary-softeng <marysofteng@gmail.com>
-Date:   Fri Apr 26 10:44:09 2024 +0300
-
-    Modified docker-compose.yml by adding images names
-
-commit ac658e12230cf91659f000aa24b2c1d0e10842b4
-Author: Mary-softeng <marysofteng@gmail.com>
-Date:   Fri Apr 26 09:10:47 2024 +0300
-
-    Created a docker-compose.yml
-
-commit e3649f6d590cb7ef88eedcfe854f32275be0594d
-Author: Mary-softeng <marysofteng@gmail.com>
-Date:   Fri Apr 26 07:16:22 2024 +0300
-
-    Greated dockerignore file in order to exclede node_modules files while copying the images
-
-commit 0e8ff5bf0ca42dbf8c7a02867588b85667b6114c
-Author: Mary-softeng <marysofteng@gmail.com>
-Date:   Fri Apr 26 07:03:28 2024 +0300
-
-    Modified docker file
-
-commit 756d088e0cbe7ae32ec71a92b67104d779e1df6b
-Author: Mary-softeng <marysofteng@gmail.com>
-Date:   Thu Apr 25 21:15:38 2024 +0300
+    Modified explanation.md file
 
-commit d97ab738dc829b4ebb63158227c587e2e85f49fd (HEAD -> master, origin/master, origin/HEAD)
+commit d97ab738dc829b4ebb63158227c587e2e85f49fd
 Author: Mary-softeng <marysofteng@gmail.com>
 Date:   Mon Apr 29 20:57:46 2024 +0300
 
@@ -511,8 +139,8 @@ commit 351a2121e56081e086e43ddc8494d582b2adb051
 Author: Mary-softeng <marysofteng@gmail.com>
 Date:   Thu Apr 25 14:16:19 2024 +0300
 
-    Updated Dockerfile in the client folder by adding the instractions to run the application and also created the first image named yolo-client:v1.0 and pushed it to the dock
-er hub
+    Updated Dockerfile in the client folder by adding the instractions to run the application and also created the first image named yolo-client:v1.0 and pushed it to the docker 
+hub
 
 commit 2bce7c724bdfac6d1845edcec34c6640da644def
 Author: Mary-softeng <marysofteng@gmail.com>
@@ -592,6 +220,7 @@ Date:   Fri Jul 3 16:19:46 2020 +0300
 
     Initialize project using Create React App
 (END)
+
 
 5. Successful running of the applications and if not, debugging measures applied.
 

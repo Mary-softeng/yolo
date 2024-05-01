@@ -14,6 +14,7 @@ services:
       - marynjuguna1-network
     depends_on:
       - backend
+    restart: always
     
   backend:
     
@@ -28,7 +29,7 @@ services:
       - marynjuguna1-network
     depends_on:
       - mongo_db
-    
+    restart: always
   mongo_db:
     container_name: mongodb
     image: mongo
@@ -37,12 +38,12 @@ services:
     ports:
       - 27017:27017
     environment:
-      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_USERNAME: user
       MONGO_INITDB_ROOT_PASSWORD: password
       
     networks:
       - marynjuguna1-network
-    
+    restart: always
 
 networks:
       marynjuguna1-network:

@@ -20,7 +20,7 @@
 On docker-compose file, I created the network named marynjuguna1-network which was used to connect all the three sevices namely; mongo_db, backend and client. Each port had a specified port as follows:
 
 mongo_db - ports:
-      - 27018:27017
+      - 27017:27017
 
 backend - ports:
       - '5000:5000'
@@ -594,6 +594,36 @@ Date:   Fri Jul 3 16:19:46 2020 +0300
 (END)
 
 5. Successful running of the applications and if not, debugging measures applied.
+
+The cliient side successfully excecuted on port 3000
+
+ **Client side**
+
+!["Client side"](Images/successful_compilation.png)
+
+!["Client side"](Images/ecommerce_homePage.png)
+
+There was a break in communication with the mondodb despite :
+
+**a. The fact that all the containers were running**
+
+!["Containers running"](Images/containers_running.png)
+
+**b. The backend-container was listening on port 5000**
+
+!["backend-contaier listening on port 5000"](Images/backend_container.png)
+
+**c. All three services connected to one network**
+
+!["All three services connected"](Images/three_services_connected.png)
+
+**c. Backend-container was able to communicate with mongo_db**
+
+!["Backend and mongo communicating"](Images/backend_communicate_mongo.png)
+
+**c. Backend-container was able to communicate with client_container**
+
+!["Backend and client communicating"](Images/client_communicate_backeng.png)
 
 
 6. Good practices such as Docker image tag naming standards for ease of identification of images and containers.

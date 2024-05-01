@@ -1,46 +1,48 @@
-version: '3.10'
+version: '3.11'
 services:
+  
+  client:
+    tty: true
+    build:
+      context: .
+      dockerfile: client.Dockerfile
+    image: marynjuguna1/yolo_client:v1.1
+    container_name: yolo_client_container
+    ports:
+      - '3000:3000'
+    networks:
+      - marynjuguna1-network
+    depends_on:
+      - backend
+    
+  backend:
+    
+    build:
+      context: .
+      dockerfile: backend.Dockerfile
+    image: marynjuguna1/yolo_backend:v1.1
+    container_name: backend_container
+    ports:
+      - '5000:5000'
+    networks:
+      - marynjuguna1-network
+    depends_on:
+      - mongo_db
+    
   mongo_db:
     container_name: mongodb
     image: mongo
-    restart: always
+    volumes:
+      - mongo_db:/data/db 
     ports:
-      - 27018:27017
+      - 27017:27017
     environment:
       MONGO_INITDB_ROOT_USERNAME: admin
       MONGO_INITDB_ROOT_PASSWORD: password
-      ME_CONFIG_MONGODB_SERVER: mongo
+      
     networks:
       - marynjuguna1-network
-    volumes:
-      - mongo_db:/data/db
-  backend:
-    container_name: yolo_backend_container
-    image: marynjuguna1/yolo_backend:v1.1
-    build:
-      context: backend
-      dockerfile: ./Dockerfile
-    ports:
-      - '5000:5000'
-    depends_on:
-      - mongo_d
-    networks:
-      - marynjuguna1-network
-
-  client:
-    container_name: yolo_client_container
-    image: marynjuguna1/yolo_client:v1.1
-    build:
-      context: client
-      dockerfile: Dockerfile
-    ports:
-      - '3000:3000'
-    depends_on:
-      - backend
-    networks:
-      - marynjuguna1-network
-    stdin_open: true
-    tty: true
+    
 
 networks:
       marynjuguna1-network:

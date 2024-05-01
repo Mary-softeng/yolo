@@ -2,16 +2,16 @@
 FROM node:16-alpine
 
 # Set the working directory
-WORKDIR /usr/src/backend
+WORKDIR /backend
 
 # Copy the package.json file
-COPY package*.json ./
+COPY backend/package*.json ./
 
 # Install dependencies
 RUN npm install
 
 # Copy the rest of the application code
-COPY . .
+COPY backend/ .
 
 # Expose the port the application might use (adjust if needed)
 EXPOSE 5000

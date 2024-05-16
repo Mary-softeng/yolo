@@ -1,39 +1,52 @@
 ---
-- name: Build and deploy YOLO application
-  hosts: all  # Replace with specific hosts if needed
-  become: true  # Run tasks with elevated privileges
+- name: Install Docker pre-requisites (adjust for your OS)
+  hosts: all
+  become: true
 
   tasks:
-    # Build the client and backend images
-    - name: Build client image
-      docker_image:
-        name: marynjuguna1/yolo_client:v1.1
-        path: ./  # Context directory for the Dockerfile
-        buildargs: null  # Optional build arguments
-
-    - name: Build backend image
-      docker_image:
-        name: marynjuguna1/yolo_backend:v1.1
-        path: ./  # Context directory for the Dockerfile
-        buildargs: null  # Optional build arguments
-
-    # Deploy the services using docker-compose
-    - name: Deploy YOLO application with Docker Compose
-      docker_compose:
-        project_name: yolo_app  # Optional project name
+    - name: Update package lists
+      apt:
+        update_cache: yes
         state: present
-        pull: true  # Pull latest images before starting
-        # Path to your docker-compose.yml file (relative or absolute)
-        compose_file: ./docker-compose.yml
 
-    # Additional tasks like setting up configurations, etc.
+    - name: Install apt pre-requisites
+      apt:
+        name: "{{ packages }}"
+        state: present
+        update_cache: yes
+      vars:
+        packages:
+          - ca-certificates
+          - curl
 
-  handlers:
-    - name: Restart YOLO services on failure
-      docker_container:
-        name: "{{ item.name }}"
-        state: restarted
-      when: ansible_failed  # Restart only when a task fails
-      loop_control:
-        loop_var: item
-        loop_condition: item.state == "failure"
+    - name: Create directory for Docker GPG key
+      file:
+        path: /etc/apt/keyrings
+        state: directory
+        mode: 0755
+
+    - name: Download Docker GPG key
+      get_url:
+        url: https://download.docker.com/linux/ubuntu/gpg
+        dest: /etc/apt/keyrings/docker.asc
+        mode: 0644
+
+    - name: Add Docker repository to sources
+      lineinfile:
+        path: /etc/apt/sources.list.d/docker.list
+        line: "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+        create: yes
+        state: present
+
+    - name: Install Docker Engine
+      apt:
+        name: docker
+        state: present
+
+# Commented out the Docker Compose deployment section
+# - name: Deploy YOLO application with Docker Compose
+#   docker_compose:
+#     project_name: yolo_app
+#     state: present
+#     pull: true
+#     compose_file: ./docker-compose.yml

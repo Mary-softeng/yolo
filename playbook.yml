@@ -1,19 +1,39 @@
 ---
-- name: Deploy Docker Compose services
-  hosts: localhost
-  become: yes
+- name: Build and deploy YOLO application
+  hosts: all  # Replace with specific hosts if needed
+  become: true  # Run tasks with elevated privileges
+
   tasks:
-    - name: Copy Docker Compose file
-      copy:
-        src: /path/to/docker-compose.yml
-        dest: /path/on/remote/docker-compose.yml
+    # Build the client and backend images
+    - name: Build client image
+      docker_image:
+        name: marynjuguna1/yolo_client:v1.1
+        path: ./  # Context directory for the Dockerfile
+        buildargs: null  # Optional build arguments
 
-    - name: Ensure Docker Compose is installed
-      package:
-        name: docker-compose
+    - name: Build backend image
+      docker_image:
+        name: marynjuguna1/yolo_backend:v1.1
+        path: ./  # Context directory for the Dockerfile
+        buildargs: null  # Optional build arguments
+
+    # Deploy the services using docker-compose
+    - name: Deploy YOLO application with Docker Compose
+      docker_compose:
+        project_name: yolo_app  # Optional project name
         state: present
+        pull: true  # Pull latest images before starting
+        # Path to your docker-compose.yml file (relative or absolute)
+        compose_file: ./docker-compose.yml
 
-    - name: Run Docker Compose
-      command: docker-compose up -d
-      args:
-        chdir: /path/on/remote/
+    # Additional tasks like setting up configurations, etc.
+
+  handlers:
+    - name: Restart YOLO services on failure
+      docker_container:
+        name: "{{ item.name }}"
+        state: restarted
+      when: ansible_failed  # Restart only when a task fails
+      loop_control:
+        loop_var: item
+        loop_condition: item.state == "failure"

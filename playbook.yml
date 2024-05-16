@@ -3,11 +3,11 @@
   hosts: all
   become: true
 
-  tasks:
-    - name: Update package lists
-      apt:
-        update_cache: yes
-        state: present
+  # tasks:
+  #   - name: Update package lists
+  #     apt:
+  #       update_cache: yes
+  #       state: present
 
     - name: Install apt pre-requisites
       apt:
@@ -44,9 +44,9 @@
         state: present
 
 # Commented out the Docker Compose deployment section
-# - name: Deploy YOLO application with Docker Compose
-#   docker_compose:
-#     project_name: yolo_app
-#     state: present
-#     pull: true
-#     compose_file: ./docker-compose.yml
+    - name: Deploy YOLO application with Docker Compose
+      community.docker.docker_compose:
+        project_name: yolo_app
+        state: present
+        pull: true
+        compose_file: docker-compose.yml

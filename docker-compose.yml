@@ -14,7 +14,7 @@ services:
       - marynjuguna1-network
     depends_on:
       - backend
-    restart: always
+    
     
   backend:
     
@@ -29,7 +29,7 @@ services:
       - marynjuguna1-network
     depends_on:
       - mongo_db
-    restart: always
+    
   mongo_db:
     container_name: mongodb
     image: mongo
@@ -43,7 +43,7 @@ services:
       
     networks:
       - marynjuguna1-network
-    restart: always
+    
 
 networks:
       marynjuguna1-network:

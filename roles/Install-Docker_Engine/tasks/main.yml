@@ -1,0 +1,6 @@
+---
+# tasks file for Install-Docker_Engine
+- name: Install Docker Engine
+    apt:
+      name: docker
+      state: present

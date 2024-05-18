@@ -1,7 +1,7 @@
 ---
 # tasks file for dir-Docker-GPG
 - name: Create directory for Docker GPG key
-    file:
-      path: /etc/apt/keyrings
-      state: directory
-      mode: 0755
+  file:
+    path: /etc/apt/keyrings
+    state: directory
+    mode: 0755

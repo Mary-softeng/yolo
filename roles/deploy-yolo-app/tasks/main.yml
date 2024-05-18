@@ -1,0 +1,8 @@
+---
+# tasks file for deploy-yolo-app
+- name: Deploy YOLO application with Docker Compose
+  community.docker.docker_compose:
+    project_name: yolo_app
+    state: present
+    pull: true
+    compose_file: docker-compose.yml

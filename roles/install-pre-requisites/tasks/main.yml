@@ -1,0 +1,11 @@
+---
+# tasks file for install-pre-requisites
+- name: Install apt pre-requisites
+  apt:
+    name: "{{ packages }}"
+    state: present
+    update_cache: yes
+  vars:
+    packages:
+      - ca-certificates
+      - curl

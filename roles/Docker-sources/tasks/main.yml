@@ -1,8 +1,0 @@
----
-# tasks file for Docker-sources
-- name: Add Docker repository to sources
-  lineinfile:
-    path: /etc/apt/sources.list.d/docker.list
-    line: "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
-    create: yes
-    state: present

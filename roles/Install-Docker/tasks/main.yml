@@ -1,6 +1,7 @@
 ---
 # tasks file for Install-Docker_Engine
 - name: Install Docker Engine
-  apt:
+  become: true
+  pip:
     name: docker
     state: present

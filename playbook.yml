@@ -5,11 +5,8 @@
 
   roles:
     - update-packages
-    - install-pre-requisites
-    - dir-Docker-GPG
-    - download-Docker-GPG
-    - Docker-sources
-    - Install-Docker-Engine
+    - Install-pip3
+    - Install-Docker
     - deploy-yolo-app
     
 

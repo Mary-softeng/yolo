@@ -1,6 +1,0 @@
----
-# vars file for install-pre-requisites
-  vars:
-    packages:
-      - ca-certificates
-      - curl

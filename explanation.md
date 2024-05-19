@@ -1,4 +1,28 @@
-# Objectives
+# Week6 IP Objectives
+
+Requirements
+------------
+
+1. Install ansible and vagrant to the root directory
+
+2. Install virtualbox . I installed ubuntu/jammy64
+
+3. Run vagrant init and specify the image (in this case ubuntu/jammy64)command that will automatically initialize and create vagrant file. Add this command to ensure connection with ansible playbook.yml;
+     
+       config.ssh.insert_key = false
+
+        config.vm.provision "ansible" do |ansible|
+            ansible.verbose = "vv"
+            ansible.playbook = "playbook.yml"
+  end
+
+4. Create roles directory and list all the tasks required to run the application using the command ansible-galaxy init <name-of-the-task>
+
+5. Create playbook.yml file and list all the roles that corresponds to the tasks in the roles directory.
+
+6. Use vagrant up to excecute the application.
+
+# Week4 IP Objectives
 1. Reason(s) for the choice of the base image on which to build each container.
 
    I used node:16-alpine as the base image because it's relatively smaller compared to node: 16. Due to its smaller size, it ensures faster download during image creation and deployment. It also occupies less space on the Docker host and utilizes lower resources such as memory when running containers.

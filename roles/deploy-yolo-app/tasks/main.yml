@@ -1,3 +1,4 @@
+---
 - name: Deploy YOLO application with Docker Compose
   community.docker.docker_compose:
     project_src: "{{ pathtoyolo }}"

@@ -1,0 +1,7 @@
+---
+# tasks file for git-clone-yolo-repo
+- name: clone yolo repo
+  ansible.builtin.git:
+    repo: https://github.com/Mary-softeng/yolo.git
+    dest: "{{ pathtoyolo }}"
+    version: master

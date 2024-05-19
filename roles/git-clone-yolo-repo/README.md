@@ -1,7 +1,7 @@
-deploy-yolo-app
+Role Name
 =========
 
-This role is responsible for excecuting yolo app; both frontend(client) and backend.
+A brief description of the role goes here.
 
 Requirements
 ------------

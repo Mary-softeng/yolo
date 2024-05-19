@@ -1,14 +1,17 @@
 ---
-- name: Install Docker pre-requisites 
-  hosts: all
+- hosts: all
   become: true
+
+  vars_files:
+    - vars.yml
 
   roles:
     - update-packages
     - install-docker-engine
     - start-docker-service
     - Install-pip3
-    - Install-Docker
+    - Install-Docker-client
+    - mongodb
     - install-docker-compose
     - deploy-yolo-app
     

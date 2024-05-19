@@ -1,0 +1,13 @@
+---
+# tasks file for mongodb
+- name: Install mongoDB
+  apt: 
+    name: mongodb-org
+    state: present
+    update_cache: yes 
+
+- name: Ensure mongodb is running and and enabled to start automatically on reboots
+  service: 
+    name: mongod 
+    enabled: yes
+    state: started

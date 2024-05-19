@@ -1,0 +1,7 @@
+---
+# tasks file for install-docker-engine
+- name: Install Docker Engine
+  become: true
+  apt:
+    name: docker.io  # Adjust package name if needed (e.g., docker-ce)
+    state: present

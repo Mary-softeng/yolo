@@ -1,6 +1,6 @@
 - name: Deploy YOLO application with Docker Compose
-  docker_compose:
+  community.docker.docker_compose:
     project_name: yolo  # Optional project name for services
     # Path to your docker-compose.yml file (adjust the path)
-    compose_file: /home/mnjuguna/Documents/Week6Ip/yolo/docker-compose.yml
+    project_src: /home/mnjuguna/Documents/Week6Ip/yolo
     state: present  # Starts and recreates services if needed

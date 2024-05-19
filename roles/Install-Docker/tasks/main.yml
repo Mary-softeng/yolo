@@ -1,7 +1,12 @@
 ---
 # tasks file for Install-Docker
-- name: Install Docker Engine
-  become: true
+
+
+
+
+
+- name: Install Python Docker client (optional)
   pip:
     name: docker
     state: present
+  when: install_docker_client  # New conditional section

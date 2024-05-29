@@ -1,25 +1,18 @@
-# Requirements
-Make sure that you have the following installed:
-- [node](https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-18-04) 
-- npm 
-- [MongoDB](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/) and start the mongodb service with `sudo service mongod start`
-
-## Navigate to the Client Folder 
- `cd client`
-
-## Run the folllowing command to install the dependencies 
- `npm install`
-
-## Run the folllowing to start the app
- `npm start`
-
-## Open a new terminal and run the same commands in the backend folder
- `cd ../backend`
-
- `npm install`
-
- `npm start`
+# Week 8 IP Orchestration Using Kubernetes
+Requirements:
+- Use of Docker files and images from Docker Hub (https://hub.docker.com/u/marynjuguna1)
+- Implement orchestration and host the project on Google Kubernetes Engine (GKE)
 
 
-## Steps followed
+## Objectives
+ - Choice of the Kubernetes objects used for deployment
 
+ - Method used to expose pods to internet traffic
+
+ - Use-of or there-lack-of of persistent storage
+
+ - Git workflow used to achieve the task
+ 
+ - Succesful running the applications(provide link)
+
+ - Docker images

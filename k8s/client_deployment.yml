@@ -6,7 +6,7 @@ metadata:
     app: yolo-client
   namespace: yolo-ecommerce
 spec:
-  replicas: 1 
+  replicas: 2
   selector:
     matchLabels:
       app: yolo-client
@@ -19,11 +19,6 @@ spec:
       - name: yolo-client
         image: marynjuguna1/yolo_client:v1.1
         imagePullPolicy: Always 
-        env:
-            - name: PORT
-              value: "3000"
-            - name: PROXY_API
-              value: "http://backend-app:5000/"
 
         ports:
           - containerPort: 3000
@@ -34,4 +29,15 @@ spec:
           limits:
             cpu: 500m # Limit to 500 millicores
             memory: 0.25Gi # Limit to 1 Gigabyte
-     
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: yolo-client
+spec:
+  selector:
+    app: yolo-client
+  ports:
+  - port: 3000
+    targetPort: 3000    

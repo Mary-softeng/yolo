@@ -6,7 +6,7 @@ metadata:
     app: yolo-backend
   namespace: yolo-ecommerce
 spec:
-  replicas: 1 # Adjust as needed
+  replicas: 2
   selector:
     matchLabels:
       app: yolo-backend
@@ -20,11 +20,11 @@ spec:
       - name: yolo-backend  # Match container name
         image: marynjuguna1/yolo_backend:v1.1
         imagePullPolicy: Always
-        env:
-            - name: MONGODB_URI
-              value: mongodb://mongo-db:27017/yolomy
+        
         ports:
           - containerPort: 5000
+            name: http
+            protocol: TCP
         resources:
           requests:
             cpu: 200m # Request 200 millicores (adjust based on your needs)
@@ -32,4 +32,15 @@ spec:
           limits:
             cpu: 1000m # Limit to 1 core (adjust based on your needs)
             memory: 1.5Gi # Limit to 1.5 Gigabytes (adjust based on your needs)
-  
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: yolo-backend
+spec:
+  selector:
+    app: yolo-backend
+  ports:
+  - port: 5000
+    targetPort: 5000

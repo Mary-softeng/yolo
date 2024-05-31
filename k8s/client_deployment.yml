@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: yolo-client
+  namespace: yolo-ecommerce
+spec:
+  replicas: 1 # Adjust as needed
+  selector:
+    matchLabels:
+      app: yolo-client
+  template:
+    metadata:
+      labels:
+        app: yolo-client
+    spec:
+      containers:
+      - name: yolo_client_container
+        image: marynjuguna1/yolo_client:v1.1
+        ports:
+          - containerPort: 3000
+        resources:
+          requests:
+            cpu: 100m # Request 100 millicores
+            memory: 256Mi # Request 256 Megabytes
+          limits:
+            cpu: 500m # Limit to 500 millicores
+            memory: 1Gi # Limit to 1 Gigabyte
+      networks:
+        - marynjuguna1-network
+      dependsOn:
+        - backend

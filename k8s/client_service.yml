@@ -8,6 +8,6 @@ spec:
     app: yolo-client
   ports:
     - protocol: TCP
-      port: 80 # Change if different from container port
+      port: 3000
       targetPort: 3000
   type: LoadBalancer # Adjust type as needed (e.g., NodePort)

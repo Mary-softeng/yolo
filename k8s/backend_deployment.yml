@@ -2,6 +2,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: yolo-backend
+  labels:
+    app: yolo-backend
   namespace: yolo-ecommerce
 spec:
   replicas: 1 # Adjust as needed
@@ -15,8 +17,12 @@ spec:
     spec:
       # Add the containers property with details
       containers:
-      - name: backend_container  # Match container name
+      - name: yolo-backend  # Match container name
         image: marynjuguna1/yolo_backend:v1.1
+        imagePullPolicy: Always
+        env:
+            - name: MONGODB_URI
+              value: mongodb://mongo-db:27017/yolomy
         ports:
           - containerPort: 5000
         resources:
@@ -26,7 +32,4 @@ spec:
           limits:
             cpu: 1000m # Limit to 1 core (adjust based on your needs)
             memory: 1.5Gi # Limit to 1.5 Gigabytes (adjust based on your needs)
-      networks:
-        - marynjuguna1-network
-      dependsOn:
-        - mongo-db # Ensure database is ready before backend deployment
+  

@@ -4,10 +4,10 @@ metadata:
   name: yolo-backend-service
   namespace: yolo-ecommerce
 spec:
+  type: LoadBalancer
   selector:
     app: yolo-backend
   ports:
     - protocol: TCP
       port: 5000 # Can be same as container port
       targetPort: 5000
-  type: ClusterIP # Internal service for backend communication

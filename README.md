@@ -14,26 +14,26 @@ Requirements:
                         
                         I created two deployments, one for the backend and the one for the client. They both contained the names of the containers, docker images, replicasets, the container ports, resources allocated and the name of the namespace.
 
-!["InsufficientCpuSpace"](Images/2insufficientcpu.png)  
+!["deployment"](Images/3backenddeployment.png)  
 
-!["InsufficientCpuSpace"](Images/2insufficientcpu.png) 
+!["deployment"](Images/4clientdeployment.png) 
                  
    
    3.  **Services** -  They expose application runningpods through a network which allows external access.
 
                        I created 3 services; backend_service, client_service and mongo_service. They all contained the ports to be exposed in order to ensure communication among the pods.
   
-  !["InsufficientCpuSpace"](Images/2insufficientcpu.png) 
+  !["service"](Images/5backendservice.png) 
 
-  !["InsufficientCpuSpace"](Images/2insufficientcpu.png) 
+  !["service"](Images/6clientservice.png) 
 
-  !["InsufficientCpuSpace"](Images/2insufficientcpu.png) 
+  !["service"](Images/7mongoservice.png) 
 
-  !["InsufficientCpuSpace"](Images/2insufficientcpu.png) 
+
 
    4.  **Namespaces** - Isolate resources within a cluster by creating virtual clusters.
 
-   !["InsufficientCpuSpace"](Images/2insufficientcpu.png) 
+   !["Namespace"](Images/8namespace.png) 
 
  - **Method used to expose pods to internet traffic**
 

@@ -218,6 +218,10 @@ Date:   Wed May 29 08:27:16 2024 +0300
     Added Requirements and Objectives of the project to the README.md file
  
  
- - Succesful running the applications(provide link)
+ - Succesful running the applications
+
+ I was unable to successfully deploy the application on Google Kubernetes Engine due do insufficient CPU space.
+ 
+ !["InsufficientCpuSpace"](Images/2insufficientcpu.png) 
 
  - Docker images

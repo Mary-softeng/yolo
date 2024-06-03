@@ -17,7 +17,7 @@ spec:
     spec:
       # Add the containers property with details
       containers:
-      - name: yolo-backend  # Match container name
+      - name: yolo-backend  
         image: marynjuguna1/yolo_backend:v1.1
         imagePullPolicy: Always
         
@@ -27,11 +27,11 @@ spec:
             protocol: TCP
         resources:
           requests:
-            cpu: 200m # Request 200 millicores (adjust based on your needs)
-            memory: 512Mi # Request 512 Megabytes (adjust based on your needs)
+            cpu: 200m 
+            memory: 512Mi 
           limits:
-            cpu: 1000m # Limit to 1 core (adjust based on your needs)
-            memory: 1.5Gi # Limit to 1.5 Gigabytes (adjust based on your needs)
+            cpu: 1000m 
+            memory: 1.5Gi 
 
 ---
 apiVersion: v1

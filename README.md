@@ -7,8 +7,10 @@ Requirements:
 ## Objectives
  - Choice of the Kubernetes objects used for deployment
   . Pod - This is the basic unit representing a co-located group of containers of which they share storage and network.
+          This was created via deployment.
 
   . Deployments - They mange replicasets to ensure a desired number of pod replicas are running for the application.
+                 
    
    . Services -  They expose application runningpods through a network which allows external access
 
@@ -58,19 +60,6 @@ Date:   Wed May 29 08:27:16 2024 +0300
 
     Added Requirements and Objectives of the project to the README.md file
 
-commit 9b252ca3669755b485ff8df585930dddbeb56d60
-Author: Mary-softeng <marysofteng@gmail.com>
-Date:   Sun May 19 19:56:03 2024 +0300
-
-    Updated explanation.md file
-
-commit 6c2dafba6004a79ba642cc0acd8b8a7fb640a10f
-Author: Mary-softeng <marysofteng@gmail.com>
-Date:   Sun May 19 19:36:58 2024 +0300
-
-    Created README.md in the roles directory
-
-:...skipping...
 commit 828d1c65bddd1e200510ea924012510d27ff3906 (HEAD -> master, origin/master, origin/HEAD)
 Author: Mary-softeng <marysofteng@gmail.com>
 Date:   Fri May 31 10:13:40 2024 +0300
@@ -95,17 +84,7 @@ Date:   Wed May 29 08:27:16 2024 +0300
 
     Added Requirements and Objectives of the project to the README.md file
 
-commit 9b252ca3669755b485ff8df585930dddbeb56d60
-Author: Mary-softeng <marysofteng@gmail.com>
-Date:   Sun May 19 19:56:03 2024 +0300
 
-    Updated explanation.md file
-
-commit 6c2dafba6004a79ba642cc0acd8b8a7fb640a10f
-Author: Mary-softeng <marysofteng@gmail.com>
-Date:   Sun May 19 19:36:58 2024 +0300
-
-    Created README.md in the roles directory
 
 commit d45722e06a1b7383285d224d879138c297aa68fa
 Author: Mary-softeng <marysofteng@gmail.com>
@@ -225,3 +204,11 @@ Date:   Wed May 29 08:27:16 2024 +0300
  !["InsufficientCpuSpace"](Images/2insufficientcpu.png) 
 
  - Docker images
+
+ I used these docker images:
+  
+   marynjuguna1/yolo_backend:v1.1
+
+   marynjuguna1/yolo_client:v1.1
+
+   mongo

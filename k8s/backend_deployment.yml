@@ -33,14 +33,3 @@ spec:
             cpu: 1000m 
             memory: 1.5Gi 
 
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: yolo-backend
-spec:
-  selector:
-    app: yolo-backend
-  ports:
-  - port: 5000
-    targetPort: 5000

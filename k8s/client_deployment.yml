@@ -30,14 +30,3 @@ spec:
             cpu: 500m # Limit to 500 millicores
             memory: 0.25Gi # Limit to 1 Gigabyte
 
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: yolo-client
-spec:
-  selector:
-    app: yolo-client
-  ports:
-  - port: 3000
-    targetPort: 3000    

@@ -12,16 +12,15 @@ Requirements:
 
   2.  **Deployments** - They mange replicasets to ensure a desired number of pod replicas are running for the application.
                         
-                        I created two deployments, one for the backend and the one for the client. They both contained the names of the containers, docker images, replicasets, the container ports, resources allocated and the name of the namespace.
+I created two deployments, one for the backend and the one for the client. They both contained the names of the containers, docker images, replicasets, the container ports, resources allocated and the name of the namespace.
 
-!["deployment"](Images/3backenddeployment.png)  
+!["deployment"](Images/3backenddeployment.png)  ; !["deployment"](Images/4clientdeployment.png) 
 
-!["deployment"](Images/4clientdeployment.png) 
+
                  
    
    3.  **Services** -  They expose application runningpods through a network which allows external access.
-
-                       I created 3 services; backend_service, client_service and mongo_service. They all contained the ports to be exposed in order to ensure communication among the pods.
+I created 3 services; backend_service, client_service and mongo_service. They all contained the ports to be exposed in order to ensure communication among the pods.
   
   !["service"](Images/5backendservice.png) 
 
